@@ -1,0 +1,8 @@
+Pour lancer l'appli: 
+ouvrire le code dans votre editeur de code.
+Via le terminal, 'cd frontend' -> 'ng serve', via un second terminal, 'cd backend' -> 'nodemon server'.
+Sur votre navigateur : localhost:4200.
+
+J'ai crée un login pour mentor si vous le souhaitez : 
+Email : mentor@test.com
+Mdp: mentorOPC0221!
