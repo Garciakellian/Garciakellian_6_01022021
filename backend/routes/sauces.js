@@ -1,4 +1,4 @@
-// declaration des constante 
+// declaration des constante
 const express = require('express');
 const router = express.Router();
 
