@@ -35,11 +35,11 @@ exports.getOneSauce = (req, res, next) => {
 }
 // code pour modifier une sauce ( route put)
 exports.modifySauce = (req, res, next) => {
-  const sauceObject = req.file ? {
+  const sauceObject = req.file ? { //regarde si req.file existe. Si oui, on enregistre la nouvelle image.
     ...JSON.parse(req.body.sauce),
     imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
   } : { ...req.body };
-Sauce.updateOne({ _id: req.params.id }, { ...sauceObject, _id: req.params.id })
+Sauce.updateOne({ _id: req.params.id }, { ...sauceObject, _id: req.params.id })// sinon on s'occupe uniquement de l'objet mis a jour
   .then(() => res.status(200).json({ message: 'Sauce modifié !!!'}))
   .catch(error => res.status(400).json({ error }));
 };
